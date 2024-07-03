@@ -13,15 +13,14 @@ class ReviewSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('review')->insert([
-            [
-                'id' => 1,
-                'customer_id' => 1,
-                'hall_id' => 1,
-                'title' => 'Great Experience',
-                'body' => 'The hall was excellent and the service was great.',
-            ],
-          
-        ]);
+        // DB::table('review')->insert([
+        //     [
+        //         'id' => 1,
+        //         'customer_id' => 1,
+        //         'hall_id' => 1,
+        //         'title' => 'Great Experience',
+        //         'body' => 'The hall was excellent and the service was great.',
+        //     ],
+        // ]);
     }
 }

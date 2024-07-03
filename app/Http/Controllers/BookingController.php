@@ -54,6 +54,11 @@ public function index()
         $invoice->booking_id = $booking->id; // Assuming you have a 'booking_id' column in your 'invoices' table
         $invoice->payment_paid = $hall->booking_price; // Replace with actual amount calculation logic
         $invoice->save();
+
+        $customer = Customer::findOrFail(auth()->id());
+        $customer->no_of_halls_booked++;
+        $customer->save();
+        
         return redirect()->route('dashboard')->with('success', 'Booking created successfully.');
     }
     
