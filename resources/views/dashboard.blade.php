@@ -31,11 +31,11 @@
                                             <p>{{ $hall->location }}</p>
                                             <p>{{ $hall->hall_type }}</p>
                                         </div>
-                                        <div>
+                                        <!-- <div>
                                             <a href="{{ route('halls.show', $hall->id) }}" class="text-blue-500 hover:underline">
                                                 {{ __('View Details') }}
                                             </a>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </li>
                             @endforeach

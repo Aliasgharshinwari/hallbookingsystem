@@ -29,15 +29,7 @@ class BookingSeeder extends Seeder
         //         'booking_end_time' => '2024-06-02',
         //     ],
         // ]);
-    }
-    
-    
-        
-    
-    
-    
-    
-    
+    } 
 
 
 }

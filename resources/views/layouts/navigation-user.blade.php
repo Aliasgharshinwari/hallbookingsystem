@@ -15,10 +15,16 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+
+                    <x-nav-link :href="route('mybookings.index')" :active="request()->routeIs('mybookings.index')">
+                        {{ __('My Bookings') }}
+                    </x-nav-link>
+
                     <!-- Add Booking Button -->
                     <button @click="showBookingForm = true" class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
                         {{ __('Add Booking') }}
                     </button>
+               
                 </div>
             </div>
 
@@ -119,6 +125,7 @@
                         <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
                             {{ __('Add Booking') }}
                         </button>
+            
                         <button @click="showBookingForm = false" class="ml-2 text-gray-500 hover:text-gray-700">{{ __('Cancel') }}</button>
                     </div>
                 </form>

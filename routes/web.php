@@ -10,6 +10,7 @@ use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\HallOwnerController;
 use App\Http\Controllers\HallController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\MyBookingController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -37,6 +38,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
 });
 Route::resource("halls", HallController::class);
 Route::resource("bookings", BookingController::class);
+Route::resource("mybookings", MyBookingController::class);
 /*
 Route::get('/customers', [CustomerController::class, 'index'])->name('customers');
 Route::get('/customers/create', [CustomerController::class, 'create'])->name('customers.create');
